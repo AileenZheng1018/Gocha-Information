@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Go Shijima</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+  <style>
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        z-index: 9999;
+        pointer-events: none;
+        user-select: none;
+        transform: rotate(-30deg);
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='600'%20height='240'%3E%3Cstyle%3Etext%20%7B%20font-size:28px;%20font-weight:bold;%20fill:rgba(0,0,0,0.05);%20font-family:sans-serif;%20%7D%3C/style%3E%3Ctext%20x='20'%20y='60'%3E%E8%AF%B7%E4%B8%8D%E8%A6%81%E4%BF%9D%E5%AD%98%3C/text%3E%3Ctext%20x='20'%20y='120'%3EDo%20not%20save%3C/text%3E%3Ctext%20x='20'%20y='180'%3E%E4%BF%9D%E5%AD%98%E3%81%97%E3%81%AA%E3%81%84%E3%81%A7%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%3C/text%3E%3Ctext%20x='20'%20y='230'%3E%EC%A0%80%EC%9E%A5%ED%95%98%EC%A7%80%20%EB%A7%88%EC%84%B8%EC%9A%94%3C/text%3E%3C/svg%3E");
+        background-repeat: repeat;
+        background-size: 600px 240px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="lang-buttons">
+    <button onclick="switchLang('zh')">中文</button>
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ja')">日本語</button>
+    <button onclick="switchLang('ko')">한국어</button>
+  </div>
+
+  <div class="back-button">
+    <a href="index.html" id="backLink">← 返回主页</a>
+  </div>
+
+  <div class="content">
+    <h2 id="goName"></h2>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="assets/WechatIMG521.jpg" onclick="openModal(this.src)">
+        <p id="caption1"></p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/WechatIMG523.jpg" onclick="openModal(this.src)">
+        <p id="caption3"></p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/WechatIMG524.jpg" onclick="openModal(this.src)">
+        <p id="caption4"></p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/WechatIMG595.jpg" onclick="openModal(this.src)">
+        <p id="caption6"></p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/WechatIMG594.jpg" onclick="openModal(this.src)">
+        <p id="caption5"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 模态弹窗 -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+</body>
+</html>
+

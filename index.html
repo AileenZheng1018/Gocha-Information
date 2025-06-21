@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Go & Chase 角色主页</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="lang-buttons">
+    <button onclick="switchLang('zh')">中文</button>
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('ja')">日本語</button>
+    <button onclick="switchLang('ko')">한국어</button>
+  </div>
+
+  <div class="container">
+    <a class="char-card" href="go.html" style="background-image: url('assets/WechatIMG519.jpg');">
+      <div class="overlay"><h2 id="goName"></h2></div>
+    </a>
+    <a class="char-card" href="chase.html" style="background-image: url('assets/WechatIMG520.jpg');">
+      <div class="overlay"><h2 id="chaseName"></h2></div>
+    </a>
+  </div>
+
+  <div class="suit-button-container">
+    <a href="suit-reference.html" class="suit-button" id="suitRefBtn">
+      如果约的是皮套（人外）稿件，或者武器相关，参考请点击这里
+    </a>
+  </div>
+
+  <section class="relationship-section">
+    <h2 id="relationship-title">角色关系</h2>
+    <div class="relationship-content">
+      <p id="relationship-text"></p>
+
+      <div class="relationship-images">
+        <div class="rel-img-box">
+          <img src="assets/Dying_Chase.png" alt="Chase濒死图" />
+          <p class="caption" id="caption01"></p>
+        </div>
+        <div class="rel-img-box">
+          <img src="assets/Shocking_Go.png" alt="Go悲伤图" />
+          <p class="caption" id="caption02"></p>
+        </div>
+        <div class="rel-img-box">
+          <img src="assets/Treasure.png" alt="Chase遗物图" />
+          <p class="caption" id="caption03"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <h3>约稿须知</h3>
+    <pre id="noticeText"></pre>
+  </section>
+</body>
+</html>
+
+
+
+
+

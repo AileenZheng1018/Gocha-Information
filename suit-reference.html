@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>皮套参考图 / Suit References</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .lang-switch {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 5px 12px;
+      cursor: pointer;
+      background-color: #2e2e2e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+
+    .lang-switch button:hover {
+      background-color: #555;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 24px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .image-grid img {
+      height: 200px;
+      width: auto;
+      object-fit: contain;
+      border: 2px solid #555;
+      border-radius: 6px;
+      background-color: #fff;
+      padding: 4px;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .image-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-grid img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="switchLang('zh')">中文</button>
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('jp')">日本語</button>
+    <button onclick="switchLang('kr')">한국어</button>
+  </div>
+
+  <div id="content"></div>
+
+  <script>
+    const langData = {
+      zh: {
+        goName: "诗岛刚",
+        goRefs: {
+          "假面骑士马赫 初始形态": ["assets/go/KRDr-Mach.webp", "assets/go/KRDr-Mach2.webp"],
+          "前轮射手": ["assets/go/Zenrin_Shooter.webp", "assets/go/Zenrin_Shooter2.webp"]
+        },
+        chaseName: "追猎",
+        chaseRefs: {
+          "Roidmude 000（ProtoZero）": ["assets/chase/KRDr-Protozero.webp", "assets/chase/Protozero_concept_art.webp"],
+          "原型假面骑士Drive": ["assets/chase/KRDr-Protodrive.webp", "assets/chase/Proto_Drive_Conept_Art.webp"],
+          "魔进追猎者": ["assets/chase/KRDr-Mashinchaser.webp", "assets/chase/KRDr-Mashinchasercobra.webp", "assets/chase/Mashin_Chaser_Concept_Art.webp"],
+          "假面骑士追猎": ["assets/chase/KRDr-Chaser.webp", "assets/chase/Chaser_Hayai.webp", "assets/chase/Kamen_Rider_Chaser_concept_art.webp"],
+          "破坏狙铳": ["assets/chase/MC_Break_Gunner.webp", "assets/chase/Do_I_feel_lucky.webp"],
+          "信号战斧": ["assets/chase/SHINGO-AX.webp"]
+        }
+      },
+      en: {
+        goName: "Go Shijima",
+        goRefs: {
+          "Kamen Rider Mach Standard": ["assets/go/KRDr-Mach.webp", "assets/go/KRDr-Mach2.webp"],
+          "Zenrin Shooter": ["assets/go/Zenrin_Shooter.webp", "assets/go/Zenrin_Shooter2.webp"]
+        },
+        chaseName: "Chase",
+        chaseRefs: {
+          "Roidmude 000 (ProtoZero)": ["assets/chase/KRDr-Protozero.webp", "assets/chase/Protozero_concept_art.webp"],
+          "Kamen Rider ProtoDrive": ["assets/chase/KRDr-Protodrive.webp", "assets/chase/Proto_Drive_Conept_Art.webp"],
+          "Mashin Chaser": ["assets/chase/KRDr-Mashinchaser.webp", "assets/chase/KRDr-Mashinchasercobra.webp", "assets/chase/Mashin_Chaser_Concept_Art.webp"],
+          "Kamen Rider Chaser": ["assets/chase/KRDr-Chaser.webp", "assets/chase/Chaser_Hayai.webp", "assets/chase/Kamen_Rider_Chaser_concept_art.webp"],
+          "Break Gunner": ["assets/chase/MC_Break_Gunner.webp", "assets/chase/Do_I_feel_lucky.webp"],
+          "Shingou-Ax": ["assets/chase/SHINGO-AX.webp"]
+        }
+      },
+      jp: {
+        goName: "詩島剛",
+        goRefs: {
+          "仮面ライダーマッハ": ["assets/go/KRDr-Mach.webp", "assets/go/KRDr-Mach2.webp"],
+          "ゼンリンシューター": ["assets/go/Zenrin_Shooter.webp", "assets/go/Zenrin_Shooter2.webp"]
+        },
+        chaseName: "チェイス",
+        chaseRefs: {
+          "ロイミュード 000（プロトゼロ）": ["assets/chase/KRDr-Protozero.webp", "assets/chase/Protozero_concept_art.webp"],
+          "仮面ライダープロトドライブ": ["assets/chase/KRDr-Protodrive.webp", "assets/chase/Proto_Drive_Conept_Art.webp"],
+          "魔進チェイサー": ["assets/chase/KRDr-Mashinchaser.webp", "assets/chase/KRDr-Mashinchasercobra.webp", "assets/chase/Mashin_Chaser_Concept_Art.webp"],
+          "仮面ライダーチェイサー": ["assets/chase/KRDr-Chaser.webp", "assets/chase/Chaser_Hayai.webp", "assets/chase/Kamen_Rider_Chaser_concept_art.webp"],
+          "ブレイクガンナー": ["assets/chase/MC_Break_Gunner.webp", "assets/chase/Do_I_feel_lucky.webp"],
+          "シンゴウアックス": ["assets/chase/SHINGO-AX.webp"]
+        }
+      },
+      kr: {
+        goName: "시지마 고우",
+        goRefs: {
+          "가면라이더 마하 (초기 형태)": ["assets/go/KRDr-Mach.webp", "assets/go/KRDr-Mach2.webp"],
+          "젠린 슈터": ["assets/go/Zenrin_Shooter.webp", "assets/go/Zenrin_Shooter2.webp"]
+        },
+        chaseName: "체이스",
+        chaseRefs: {
+          "로이뮤드 000 (프로토제로)": ["assets/chase/KRDr-Protozero.webp", "assets/chase/Protozero_concept_art.webp"],
+          "가면라이더 프로토드라이브": ["assets/chase/KRDr-Protodrive.webp", "assets/chase/Proto_Drive_Conept_Art.webp"],
+          "마신 체이서": ["assets/chase/KRDr-Mashinchaser.webp", "assets/chase/KRDr-Mashinchasercobra.webp", "assets/chase/Mashin_Chaser_Concept_Art.webp"],
+          "가면라이더 체이서": ["assets/chase/KRDr-Chaser.webp", "assets/chase/Chaser_Hayai.webp", "assets/chase/Kamen_Rider_Chaser_concept_art.webp"],
+          "브레이크 거너": ["assets/chase/MC_Break_Gunner.webp", "assets/chase/Do_I_feel_lucky.webp"],
+          "신호 액스": ["assets/chase/SHINGO-AX.webp"]
+        }
+      }
+    };
+
+    function switchLang(lang) {
+      const data = langData[lang];
+      const contentDiv = document.getElementById("content");
+      contentDiv.innerHTML = "";
+
+      const goTitle = document.createElement("h2");
+      goTitle.textContent = data.goName;
+      contentDiv.appendChild(goTitle);
+
+      for (const [subTitle, images] of Object.entries(data.goRefs)) {
+        const h3 = document.createElement("h3");
+        h3.textContent = subTitle;
+        contentDiv.appendChild(h3);
+
+        const imgBox = document.createElement("div");
+        imgBox.className = "image-grid";
+        images.forEach(src => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = subTitle;
+          imgBox.appendChild(img);
+        });
+        contentDiv.appendChild(imgBox);
+      }
+
+      const chaseTitle = document.createElement("h2");
+      chaseTitle.textContent = data.chaseName;
+      contentDiv.appendChild(chaseTitle);
+
+      for (const [subTitle, images] of Object.entries(data.chaseRefs)) {
+        const h3 = document.createElement("h3");
+        h3.textContent = subTitle;
+        contentDiv.appendChild(h3);
+
+        const imgBox = document.createElement("div");
+        imgBox.className = "image-grid";
+        images.forEach(src => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = subTitle;
+          imgBox.appendChild(img);
+        });
+        contentDiv.appendChild(imgBox);
+      }
+    }
+
+    // 默认语言
+    switchLang("zh");
+
+    // 延迟绑定：确保 DOM 元素加载完成
+    window.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+    // 监听所有图片点击
+      document.addEventListener("click", function (e) {
+        if (e.target.tagName === "IMG" && e.target.closest(".image-grid")) {
+          lightboxImg.src = e.target.src;
+          lightbox.style.display = "flex";
+        }
+      });
+
+    // 点击遮罩关闭
+      lightbox.addEventListener("click", function (e) {
+      // 只有点击遮罩（不是图片）才关闭
+        if (e.target === lightbox) {
+         lightbox.style.display = "none";
+        }
+      });
+
+    // 按 ESC 关闭
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && lightbox.style.display === "flex") {
+          lightbox.style.display = "none";
+        }
+      });
+    });
+  </script>
+  <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+    <img id="lightbox-img" src="" alt="preview" style="max-width:90%; max-height:90%; border:4px solid white; border-radius:8px;" />
+  </div>
+</body>
+</html>
+
