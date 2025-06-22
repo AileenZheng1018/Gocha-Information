@@ -20,7 +20,23 @@ const content = {
     suitTitleGo: "诗岛刚",
     suitGoItems: ["假面骑士马赫 初始形态", "前轮射手"],
     suitTitleChase: "追猎",
-    suitChaseItems: ["Roidmude 000（ProtoZero）", "魔进追猎者", "假面骑士追猎", "破坏狙铳", "信号战斧"]
+    suitChaseItems: ["Roidmude 000（ProtoZero）", "魔进追猎者", "假面骑士追猎", "破坏狙铳", "信号战斧"],
+    goInfo: {
+      姓名: "诗岛刚",
+      性别: "男",
+      年龄: "故事开始到结束的那一年是19岁",
+      身高: "19岁时是175cm",
+      性格: "有些像萨摩耶一样、热情的弟弟角色。身体素质好得不寻常，喜欢一边翻跟头一边走路。喜欢花里胡哨的东西，比如魔术、烟花。",
+      外表: "头发是烫染过的棕色卷发，天蓝色眼睛。外套是白色有红色点缀，帽子内侧也是红色，背后垂着两条红色平行条纹。据说买了7件。T恤精心搭配，鞋带每天挑色。项链是名字Go的罗马音。"
+    },
+    chaseInfo: {
+      姓名: "Chase",
+      性别: "无",
+      年龄: "复制了20+岁的狩野洸一的外貌，实际上大概不超过3岁",
+      身高: "172cm",
+      性格: "型号落后所以性格死板，迟钝的机器人Roidmude。无条件保护人类，曾被洗脑对立，后改过成为可靠伙伴。渴望理解情感，最终在半懂不懂的情况下死去。",
+      外表: "黑色两边翘发型，紫色眼睛，左手紫色金属手环。裤子紧，腰后挂银链子，只穿外套无内衬。"
+    }
   },
   en: {
     goName: "Go Shijima",
@@ -45,7 +61,23 @@ const content = {
     suitTitleGo: "Go Shijima",
     suitGoItems: ["Kamen Rider Mach Standard", "Zenrin Shooter"],
     suitTitleChase: "Chase",
-    suitChaseItems: ["Roidmude 000 (ProtoZero)", "Mashin Chaser", "Kamen Rider Chaser", "Breaker Gunner", "Shingou-Ax"]
+    suitChaseItems: ["Roidmude 000 (ProtoZero)", "Mashin Chaser", "Kamen Rider Chaser", "Breaker Gunner", "Shingou-Ax"],
+    goInfo: {
+      Name: "Go Shijima",
+      Gender: "Male",
+      Age: "19 years old during the story",
+      Height: "175 cm at age 19",
+      Personality: "Energetic and cheerful, like a Samoyed puppy. Has unusual physical abilities and enjoys walking on his hands or tumbling. Loves flashy things like fireworks and magic tricks.",
+      Appearance: "Brown curly hair (dyed and permed), sky-blue eyes. White jacket with red accents and two red parallel stripes from hood to hem. Owns seven identical jackets. T-shirts are carefully matched, and shoelaces are color-coordinated. Wears a silver necklace that says 'Go' in Roman letters."
+    },
+    chaseInfo: {
+      Name: "Chase",
+      Gender: "None",
+      Age: "Appearance copied from a man in his 20s, but mentally about 3 years old",
+      Height: "172 cm",
+      Personality: "A stiff and slow android (Roidmude), often emotionless and flat-toned. Built to protect humans unconditionally, but was once brainwashed into opposing them. Later regained himself and became a reliable ally. Tries to understand human emotions and be Go’s friend, but is awkward. Died without fully understanding 'love'.",
+      Appearance: "Black spiky hair curling upward, purple eyes. Wears a purple leather bracelet with metal accents on his left wrist. Tight pants with shiny silver chains at the waist. Only wears an outer jacket, no inner layer."
+    }
   },
   ja: {
     goName: "詩島剛",
@@ -70,7 +102,23 @@ const content = {
     suitTitleGo: "詩島剛",
     suitGoItems: ["仮面ライダーマッハ", "ゼンリンシューター"],
     suitTitleChase: "チェイス",
-    suitChaseItems: ["ロイミュード 000（プロトゼロ）", "魔進チェイサー", "仮面ライダーチェイサー", "ブレイクガンナー", "シンゴウアックス"]
+    suitChaseItems: ["ロイミュード 000（プロトゼロ）", "魔進チェイサー", "仮面ライダーチェイサー", "ブレイクガンナー", "シンゴウアックス"],
+    goInfo: {
+      名前: "詩島剛",
+      性別: "男",
+      年齢: "物語の時点では19歳",
+      身長: "19歳時点で175cm",
+      性格: "サモエドのように元気で弟系キャラ。運動神経抜群で、側転しながら歩くことも好き。花火やマジックなど派手なものが好き。",
+      外見: "茶色のカールヘア（パーマ・染髪）、空色の瞳。赤い装飾が施された白いジャケット（背中に2本の赤ラインあり）を7着所有。Tシャツと靴紐の色を毎日コーディネート。『Go』と書かれた銀のネックレスを着用。"
+    },
+    chaseInfo: {
+      名前: "チェイス",
+      性別: "なし",
+      年齢: "20代の狩野洸一の外見をコピー、実年齢は3歳未満",
+      身長: "172cm",
+      性格: "旧型のロイミュードで、無表情で口調も淡々としている。人間を守るために設計され、かつて洗脳により敵対したが、後に信頼できる仲間となる。人間の感情を学びたいと努力するが不器用で、愛を理解しきれぬまま死去。",
+      外見: "跳ねた黒髪、紫の瞳。左手に金属装飾のある紫のレザーブレスレット。タイトなズボンに銀のチェーンを複数装着。インナーなしで上着のみ着用。"
+    }
   },
   ko: {
     goName: "Go Shijima",
@@ -95,9 +143,35 @@ const content = {
     suitTitleGo: "시지마 고우",
     suitGoItems: ["가면라이더 마하 (초기 형태)", "젠린 슈터"],
     suitTitleChase: "체이스",
-    suitChaseItems: ["로이뮤드 000 (프로토제로)", "마신 체이서", "가면라이더 체이서", "브레이크 건너", "신호 액스"]
+    suitChaseItems: ["로이뮤드 000 (프로토제로)", "마신 체이서", "가면라이더 체이서", "브레이크 건너", "신호 액스"],
+    goInfo: {
+      이름: "시지마 고우",
+      성별: "남성",
+      나이: "이야기 시점에서 19세",
+      키: "19세일 때 175cm",
+      성격: "사모예드 같은 명랑한 남동생 타입. 운동 신경이 뛰어나며 재주넘기하며 걷는 것을 좋아함. 불꽃놀이와 마술처럼 화려한 것을 좋아함.",
+      외모: "갈색 곱슬머리(펌+염색), 하늘색 눈. 빨간 줄무늬가 있는 흰색 자켓을 7벌 보유. 티셔츠는 신중하게 매치, 신발끈 색도 맞춤. ‘Go’라고 적힌 은색 목걸이를 착용함."
+    },
+    chaseInfo: {
+      이름: "체이스",
+      성별: "없음",
+      나이: "20대 남성 외모를 복제했지만 실제 나이는 약 3세 미만",
+      키: "172cm",
+      성격: "구형 로이뮤드로, 무표정하고 말투도 단조로움. 인간을 보호하기 위해 만들어졌으나 한때 세뇌당해 적대함. 이후 신뢰받는 동료로 복귀. 인간의 감정을 배우고자 했으나 서툴고, ‘사랑’을 완전히 이해하지 못한 채 사망.",
+      외모: "위로 튀는 검은 머리, 보라색 눈동자. 왼손에는 금속 장식이 있는 보라색 가죽 팔찌 착용. 꽉 끼는 바지에 은색 체인을 착용. 안에는 아무것도 입지 않고 겉옷만 착용."
+    }
   }
 };
+
+function renderCharacterInfo(role, lang) {
+  const info = langData[lang][role + 'Info'];
+  const container = document.getElementById('character-info');
+  if (!container || !info) return;
+
+  container.innerHTML = Object.entries(info).map(
+    ([key, value]) => `<p><strong>${key}：</strong>${value}</p>`
+  ).join('');
+}
 
 function switchLang(lang) {
   const c = content[lang];
@@ -119,6 +193,23 @@ function switchLang(lang) {
   }
 
   if (document.getElementById("noticeText")) document.getElementById("noticeText").textContent = c.noticeText;
+
+  if (document.getElementById("character-info")) {
+    let infoHTML = "";
+
+    if (document.getElementById("goName") && c.goInfo) {
+      for (const key in c.goInfo) {
+        infoHTML += `<strong>${key}：</strong>${c.goInfo[key]}<br>`;
+      }
+    } else if (document.getElementById("chaseName") && c.chaseInfo) {
+      for (const key in c.chaseInfo) {
+        infoHTML += `<strong>${key}：</strong>${c.chaseInfo[key]}<br>`;
+      }
+    }
+
+    document.getElementById("character-info").innerHTML = infoHTML;
+  }
+
 
   // ✅ 插图页面配文（如有的话，继续保留不影响）
   for (let i = 1; i <= 6; i++) {
@@ -159,6 +250,7 @@ function closeModal() {
   const modal = document.getElementById("imageModal");
   modal.style.display = "none";
 }
+
 
 
 
